@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Note } from './note';
 
 @Injectable()
 export class NoteDataService {
-
     noteId: number = 0;
     notes: Note[] = [];
 
-    constructor() { }
+    constructor() { 
+    
+    }
 
     getNote(noteId: number): Note {
         return this.notes.filter(note => note.id === noteId).pop();

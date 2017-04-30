@@ -13,8 +13,9 @@
         </ul>
     </section>
     <section class="add-note">
-        <input name="title" placeholder="title" autofocus="" [(ngModel)]="newNote.title" />
-        <textarea name="content" placeholder="content" [(ngModel)]="newNote.content"></textarea>
+        <h2>Add Note</h2>
+        <input name="title" placeholder="title" autofocus="" [(ngModel)]="newNote.title" /><br />
+        <textarea name="content" placeholder="content" [(ngModel)]="newNote.content"></textarea><br />
         <button (click)="addNote()">Add</button>
     </section>
     <footer class="footer" *ngIf="notes.length > 0">

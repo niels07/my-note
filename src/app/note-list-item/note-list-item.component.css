@@ -1,0 +1,14 @@
+.note-list-note {
+    width: 100%;
+    border: 1px solid;
+    height: 25px;
+}
+
+.note-list-note:nth-child(odd) {
+    background-color: #f4f7f8;
+}
+
+.note-list-note>div {
+    float: left;
+    padding: 5px;
+}

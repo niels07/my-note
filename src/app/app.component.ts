@@ -9,19 +9,19 @@ import { Note } from './note';
     providers: [NoteDataService]
 })
 export class AppComponent {
-    newNote: Note = new Note();
-    title = 'My Note';
-    
     constructor(private noteDataService: NoteDataService) {
 
     }
 
-    addNote() {
-        this.noteDataService.addNote(this.newNote);
-        this.newNote = new Note();
+    onAddNote(note: Note) {
+        this.noteDataService.addNote(note);
     }
 
-    removeNote(note) {
+    onUpdateNote(noteId: number) {
+        this.noteDataService.updateNote(noteId);
+    }
+
+    onRemoveNote(note: Note) {
         this.noteDataService.deleteNote(note.id);
     }
 

@@ -1,27 +1,6 @@
-<section class="note-list">
-    <header>
-        <h1>{{title}}</h1>
-    </header>
-    <section class="note-table" *ngIf="notes.length > 0">
-        <ul>
-            <li *ngFor="let note of notes">
-                <div class="note">
-                    <label>{{note.title}}</label>
-                    <a href="#">Edit</a>    
-                </div>
-            </li>
-        </ul>
-    </section>
-    <section class="add-note">
-        <h2>Add Note</h2>
-        <input name="title" placeholder="title" autofocus="" [(ngModel)]="newNote.title" /><br />
-        <textarea name="content" placeholder="content" [(ngModel)]="newNote.content"></textarea><br />
-        <button (click)="addNote()">Add</button>
-    </section>
-    <footer class="footer" *ngIf="notes.length > 0">
-        <span class="note-count">
-            <strong>{{notes.length}}</strong>
-            {{notes.length == 1 ? 'item' : 'items'}} total notes
-        </span>
-    </footer>
+<section class="my-note">
+    <app-note-list-header></app-note-list-header>
+    <app-manage-note (add)="onAddNote($event)"></app-manage-note>
+    <app-note-list [notes]="notes" (remove)="onRemoveNote($event)"></app-note-list>
+    <app-note-list-footer [notes]="notes"></app-note-list-footer>
 </section>

@@ -1,0 +1,22 @@
+<section class="manage-note">
+    <h2>Add Note</h2>
+    <div class="field">
+        <label>Title</label><br />
+        <input 
+            name="title"
+            class="note-title"
+            placeholder="title"
+            autofocus=""
+            [(ngModel)]="newNote.title" />
+    </div>
+    <div class="field">
+        <label>Content</label><br />
+        <textarea
+            name="content"
+            class="note-content"
+            placeholder="content"
+            [(ngModel)]="newNote.content"></textarea>
+    </div>
+    <button (click)="addNote()">Add</button>
+</section>
+

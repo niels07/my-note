@@ -1,0 +1,8 @@
+<section class="note-list" *ngIf="notes.length > 0">
+    <div class="note-list-row" *ngFor="let note of notes">
+        <app-note-list-item
+            [note]="note"
+            (remove)="onRemoveNote($event)">
+        </app-note-list-item>
+    </div>
+</section>
